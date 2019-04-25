@@ -1,0 +1,7 @@
+<a href='login'>Login</a>
+<input id="input" type="text"></input>
+<div id="data">
+  <%= for check <- @checks do %>
+      <li>[<%= check.inserted_at %>] <%= check.inn %> : <%= if check.is_correct do %> корректен <%= else %> некорректен <% end %></li>
+  <% end %>
+</div>

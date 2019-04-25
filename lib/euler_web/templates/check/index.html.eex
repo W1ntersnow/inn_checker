@@ -1,0 +1,24 @@
+<a href='logout'>Logout</a>
+<h1>Listing Checks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Inn</th>
+      <th>Ip address</th>
+      <th>Is correct</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= for check <- @checks do %>
+    <tr>
+      <td><%= check.inn %></td>
+      <td><%= check.ip_address %></td>
+      <td><%= check.is_correct %></td>
+      <td>
+        <%= link "Delete", to: Routes.check_path(@conn, :delete, %{"id" => check.id}), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

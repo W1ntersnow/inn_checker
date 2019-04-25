@@ -1,0 +1,14 @@
+/_build
+/deps
+/doc
+/tmp
+/node_modules
+/assets/node_modules
+/_build
+/cover
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
